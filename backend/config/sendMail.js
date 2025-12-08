@@ -1,3 +1,4 @@
+// importing nodemailer to send emails
 import nodemailer from "nodemailer"
 
 import dotenv from "dotenv"
@@ -11,7 +12,7 @@ const transporter = nodemailer.createTransport({
     pass: process.env.USER_PASSWORD,
   },
 });
-
+//  function to generate random otp and send mail
 const sendMail = async (to,otp) => {
      await transporter.sendMail({
     from: process.env.USER_EMAIL,
