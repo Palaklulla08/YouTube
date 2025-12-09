@@ -1,15 +1,20 @@
+// importing model channel
 import Channel from "../model/channelModel.js";
+// importing cloudinary
 import uploadOnCloudinary from "../config/cloudinary.js";
+// importing shorts
 import Short from "../model/shortModel.js";
 
 
 
-
+// function create short
 export const createShort = async (req, res) => {
   try {
+    // getting title description tags channelid
     const { title, description, tags, channelId } = req.body;
-    const file = req.file;
 
+    const file = req.file;
+// if not received file then return short video is required
     if (!file) {
       return res.status(400).json({ message: "Shorts video is required" });
     }
@@ -39,11 +44,12 @@ export const createShort = async (req, res) => {
     res.status(500).json({ message: "Error creating short", error: error.message });
   }
 };
+// -----------------------------------------------------------------------------------------------------------
 
-
-
+// function for getting all shorts
 export const getAllShorts = async (req, res) => {
   try {
+    // finding shorts in the model
     const shorts = await Short.find()
       .populate("channel comments.author comments.replies.author") // optional: populate channel info
       .sort({ createdAt: -1 }); // newest first
@@ -307,11 +313,13 @@ export const toggleSaveShort = async (req, res) => {
   }
 };
 
-
-
+// ----------------------------------------------------------------------------------------------
+// get saved shorts 
 export const getSavedShorts = async (req, res) => {
   try {
+    // getting user id 
     const userId = req.userId; // ✅ Middleware se aa rahi hai
+    // if not user id then return unauthorized
     if (!userId) {
       return res.status(401).json({ message: "Unauthorized: User not found" });
     }
@@ -321,6 +329,7 @@ export const getSavedShorts = async (req, res) => {
       .populate("channel", "name avatar") // channel info include karo
       .populate("saveBy", "username");    // optional: dekhna kaun save kar chuka hai
 
+      
     if (!savedShorts || savedShorts.length === 0) {
       return res.status(404).json({ message: "No saved videos found" });
     }
@@ -337,7 +346,9 @@ export const getSavedShorts = async (req, res) => {
 // ---------------- Get Liked Shorts ----------------
 export const getLikedShorts = async (req, res) => {
   try {
+    // getting user id from req.userId
     const userId = req.userId; // middleware se aayega
+    // if not found then return unauthorized user
     if (!userId) {
       return res.status(401).json({ message: "Unauthorized: User not found" });
     }
@@ -355,3 +366,4 @@ export const getLikedShorts = async (req, res) => {
     });
   }
 };
+// ----------------------------------------------------------------------------------------
