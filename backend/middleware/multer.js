@@ -1,24 +1,13 @@
-// import multer from "multer"
-
-// let storage = multer.diskStorage({
-//     destination:(req,file,cb)=>{
-//         cb(null , "./public")
-//     },
-//     filename:(req,file,cb)=>{
-//         cb(null , file.originalname)
-//     }
-
-// })
-// const upload = multer({storage})
-
-// export default upload
+// importing multer
 import multer from "multer";
-
+//  creating variable storage as multer.diskstorage
 let storage = multer.diskStorage({
+    // giving destination as ./public 
   destination: (req, file, cb) => {
     cb(null, "./public");
   },
   filename: (req, file, cb) => {
+    // filename as the originalname of file with date 
     const uniqueName = Date.now() + "-" + file.originalname;
     cb(null, uniqueName);
   },
@@ -27,3 +16,4 @@ let storage = multer.diskStorage({
 const upload = multer({ storage });
 
 export default upload;
+// --------------------------------------------------------------------
