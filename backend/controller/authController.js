@@ -10,8 +10,7 @@ import bcrypt from 'bcryptjs'
 import uploadOnCloudinary from "../config/cloudinary.js"
 // mail for receiveing otp
 import sendMail from "../config/sendMail.js"
-import e, { response } from "express"
-import { sign } from "jsonwebtoken"
+
 
 
 // signup function which get username , email , password and photo from req.body if file is present then upload it to cloudinary and get the url
