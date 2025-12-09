@@ -17,7 +17,7 @@ export const createPost = async (req, res) => {
     if (!channelId || !content) {
       return res.status(400).json({ message: "Channel ID and content are required" });
     }
-setti
+// setting image url as null
     let imageUrl = null;
     if (file) {
       imageUrl = await uploadOnCloudinary(file.path);
@@ -44,10 +44,12 @@ setti
   }
 };
 
-
+// --------------------------------------------------------------------------------------------
+// function for getting all post 
 
 export const getAllPosts = async (req, res) => {
   try {
+    // finding post 
     const posts = await Post.find()
       .populate("channel comments.author comments.replies.author") // optional: populate channel info
       .sort({ createdAt: -1 }); // newest first
@@ -177,4 +179,4 @@ export const addReplyInPost = async (req, res) => {
     return res.status(500).json({ message: "Error adding reply", error: error.message });
   }
 };
-
+// -------------------------------------------------------------------------------------------------
