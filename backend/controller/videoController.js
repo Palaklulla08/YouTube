@@ -1,7 +1,10 @@
-
+// importing video model
 import Video from "../model/videoModel.js";
+// importing channel model
 import Channel from "../model/channelModel.js";
+// importing cloudinary
 import uploadOnCloudinary from "../config/cloudinary.js";
+// importing user model
 import User from "../model/userModel.js";
 
 
@@ -373,7 +376,7 @@ export const toggleSaveVideo = async (req, res) => {
   }
 };
 
-
+// ---------------------------------------------------------------
 export const getSavedVideos = async (req, res) => {
   try {
     const userId = req.userId; // ✅ Middleware se aa rahi hai
@@ -423,3 +426,4 @@ export const getLikedVideos = async (req, res) => {
     });
   }
 };
+// ---------------------------------------------------------------------
