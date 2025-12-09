@@ -1,4 +1,6 @@
+// importing express
 import express from "express"
+// importing middleware 
 import isAuth from "../middleware/isAuth.js"
 import {  addToHistory, createChannel, getAllChannel, getChannel, getCurrentUser, getHistory, getRecommendedContent, getSubscribedContent, toggleSubscribe, updateChannel } from "../controller/userController.js"
 import upload from "../middleware/multer.js"
