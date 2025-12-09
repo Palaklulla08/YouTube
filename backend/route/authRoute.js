@@ -8,7 +8,7 @@ import upload from "../middleware/multer.js"
 // creating authrouter
 const authRouter = express.Router()
 
-
+// creating post url such as signup signin signout google-auth sendotp verify otp resetpassword
 authRouter.post("/signup",upload.single("photoUrl"),signUp)
 authRouter.post("/signin",signin)
 authRouter.get("/signout",signOut)
