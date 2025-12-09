@@ -1,5 +1,6 @@
+// importing mongose 
 import mongoose from "mongoose";
-
+// creating new playlistschema
 const playlistSchema = new mongoose.Schema({
   channel: { type: mongoose.Schema.Types.ObjectId, ref: "Channel", required: true },
   title: { type: String, required: true },
