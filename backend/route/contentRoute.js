@@ -1,4 +1,6 @@
+// importing express
 import express from "express"
+// importing middleware 
 import isAuth from "../middleware/isAuth.js";
 import upload from "../middleware/multer.js";
 import { addComment, addReply, addView, createVideo, deleteVideo, fetchVideo, getAllVideos, getChannelVideos, getLikedVideos, getSavedVideos, toggleDislikeVideo, toggleLikeVideo, toggleSaveVideo, updateVideo } from "../controller/videoController.js";
