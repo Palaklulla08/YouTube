@@ -1,3 +1,4 @@
+// importing mongoose
 import mongoose from "mongoose";
 
 const replySchema = new mongoose.Schema({
