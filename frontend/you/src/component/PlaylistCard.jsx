@@ -98,7 +98,7 @@ export default function PlaylistCard({ id, title, videos, savedBy }) {
 
             {/* Header */}
             <h2 className="text-2xl font-extrabold mb-3 text-white flex items-center gap-2">
-              {title} <span className="text-gray-400 font-normal">– Videos</span>
+              {title} <span className="text-gray-400 font-normal"> Videos</span>
             </h2>
             <div className="h-[2px]  bg-red-600 mb-6 rounded-full"></div>
 

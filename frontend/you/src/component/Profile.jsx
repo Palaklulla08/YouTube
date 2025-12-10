@@ -102,7 +102,7 @@ const Profile = () => {
             <button className="flex items-center gap-3 px-4 py-2 hover:bg-gray-700" onClick={()=>navigate("/signin")}>
               <MdOutlineSwitchAccount className="text-xl" /> SignIn with other account
             </button>
-            {userData?.channel && <button className="flex items-center gap-3 px-4 py-2 hover:bg-gray-700" onClick={()=>navigate("/ptstudio/dashboard")}>
+            {userData?.channel && <button className="flex items-center gap-3 px-4 py-2 hover:bg-gray-700" onClick={()=>navigate("/ytstudio/dashboard")}>
               <SiYoutubestudio className="w-5 h-5 text-orange-400" /> YT Studio
             </button>}
             

@@ -61,7 +61,7 @@ function Dashboard() {
             
             label="Views"
             value={totalViews || "0"}
-            onClick={()=>navigate("/ptstudio/analytics")}
+            onClick={()=>navigate("/ytstudio/analytics")}
           />
           <AnalyticsCard
             
@@ -72,7 +72,7 @@ function Dashboard() {
            
             label="Estimated revenue"
             value={`+${contentRevenue || 0}`}
-            onClick={()=>navigate("/ptstudio/revenue")}
+            onClick={()=>navigate("/ytstudio/revenue")}
           />
         </div>
       </div>

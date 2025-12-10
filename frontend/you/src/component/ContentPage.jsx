@@ -101,7 +101,7 @@ const handleDeletePost = async (postId) => {
                         <FaEdit
                           className="cursor-pointer hover:text-blue-400"
                           onClick={() =>
-                            navigate(`/ptstudio/managevideo/${v._id}`)
+                            navigate(`/ytstudio/managevideo/${v._id}`)
                           }
                         />
                       </td>
@@ -131,7 +131,7 @@ const handleDeletePost = async (postId) => {
                     <FaEdit
                       className="cursor-pointer hover:text-blue-400"
                       onClick={() =>
-                        navigate(`/ptstudio/managevideo/${v._id}`)
+                        navigate(`/ytstudio/managevideo/${v._id}`)
                       }
                     />
                   </div>
@@ -173,7 +173,7 @@ const handleDeletePost = async (postId) => {
                       <td className="p-3 text-start">{s.views}</td>
                       <td className="p-3">
                         <FaEdit className="cursor-pointer hover:text-blue-400" onClick={() =>
-                            navigate(`/ptstudio/manageshort/${s._id}`)
+                            navigate(`/ytstudio/manageshort/${s._id}`)
                           } />
                       </td>
                     </tr>
@@ -202,7 +202,7 @@ const handleDeletePost = async (postId) => {
                       <p className="text-xs text-gray-400">{s.views} views</p>
                     </div>
                     <FaEdit className="text-gray-400 hover:text-blue-400 cursor-pointer" onClick={() =>
-                            navigate(`/ptstudio/manageshort/${s._id}`)
+                            navigate(`/ytstudio/manageshort/${s._id}`)
                           }  />
                   </div>
                 </div>
@@ -242,7 +242,7 @@ const handleDeletePost = async (postId) => {
                       <td className="p-3 text-start">{p.videos?.length || 0}</td>
                       <td className="p-3">
                         <FaEdit className="cursor-pointer hover:text-blue-400" onClick={() =>
-                            navigate(`/ptstudio/manageplaylist/${p._id}`)
+                            navigate(`/ytstudio/manageplaylist/${p._id}`)
                           } />
                       </td>
                     </tr>
@@ -271,7 +271,7 @@ const handleDeletePost = async (postId) => {
                       </p>
                     </div>
                     <FaEdit className="text-gray-400 hover:text-blue-400 cursor-pointer" onClick={() =>
-                            navigate(`/ptstudio/manageplaylist/${p._id}`)
+                            navigate(`/ytstudio/manageplaylist/${p._id}`)
                           } />
                   </div>
                 </div>
