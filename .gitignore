@@ -1,0 +1,18 @@
+# Node modules
+frontend/you/node_modules/
+backend/node_modules/
+
+# Env files
+frontend/you/.env
+backend/.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editor files
+.vscode/
+.idea/
+.DS_Store
