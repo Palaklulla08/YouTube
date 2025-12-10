@@ -16,4 +16,4 @@ npm install
 command to run :npm run dev
 
 run git clone with git repo link ,
-git repo link:
+git repo link:https://github.com/Palaklulla08/YouTube.git
