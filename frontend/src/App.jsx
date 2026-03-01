@@ -41,7 +41,7 @@ import ManagePlaylist from './pages/ManagePlaylist'
 import UseGetRecommendation from './customHooks/UseGetRecommendation'
 import RevenuePage from './component/RevenuePage'
 
-export const serverUrl = "https://youtube-oodn.onrender.com"
+export const serverUrl = "http://localhost:8000"
 
 const ProtectedRoute = ({ userData, children }) => {
   if (!userData) {
