@@ -75,22 +75,22 @@ function App() {
       <ScrollToTop/>
       <Routes>
         <Route path='/' element={<Home />}>
-          <Route path='/shorts' element={<ProtectedRoute userData={userData}><Shorts /></ProtectedRoute>} />
-          <Route path='/viewchannel' element={<ProtectedRoute userData={userData}><ViewChannel /></ProtectedRoute>} />
-          <Route path='/updatechannel' element={<ProtectedRoute userData={userData}><UpdateChannel /></ProtectedRoute>} />
-          <Route path='/mobileprofile' element={<MobileProfile />} />
-        <Route path='/createpage' element={<ProtectedRoute userData={userData}><CreatePage /></ProtectedRoute>} />
-          <Route path='/create-video' element={<ProtectedRoute userData={userData}><CreateVideo /></ProtectedRoute>} />
-          <Route path='/create-post' element={<ProtectedRoute userData={userData}><CreatePost /></ProtectedRoute>} />
-          <Route path='/create-short' element={<ProtectedRoute userData={userData}><CreateShorts /></ProtectedRoute>} />
-          <Route path='/create-playlist' element={<ProtectedRoute userData={userData}><CreatePlaylist /></ProtectedRoute>} />
-          <Route path='/watch-short/:shortId' element={<ProtectedRoute userData={userData}><WatchShortPage /></ProtectedRoute>} />
-          <Route path='/channelpage/:channelId' element={<ProtectedRoute userData={userData}><ChannelPageWrapper/></ProtectedRoute>} />
-          <Route path='/subscribepage' element={<ProtectedRoute userData={userData}><SubscribePage/></ProtectedRoute>} />
-          <Route path='/saveplaylist' element={<ProtectedRoute userData={userData}><SavedPlaylistPage/></ProtectedRoute>} />
-          <Route path='/savevideos' element={<ProtectedRoute userData={userData}><SavedContentPage/></ProtectedRoute>} />
-          <Route path='/likedvideos' element={<ProtectedRoute userData={userData}><LikedContentPage/></ProtectedRoute>} />
-          <Route path='/history' element={<ProtectedRoute userData={userData}><HistoryPage/></ProtectedRoute>} />
+          <Route path='shorts' element={<ProtectedRoute userData={userData}><Shorts /></ProtectedRoute>} />
+          <Route path='viewchannel' element={<ProtectedRoute userData={userData}><ViewChannel /></ProtectedRoute>} />
+          <Route path='updatechannel' element={<ProtectedRoute userData={userData}><UpdateChannel /></ProtectedRoute>} />
+          <Route path='mobileprofile' element={<MobileProfile />} />
+        <Route path='createpage' element={<ProtectedRoute userData={userData}><CreatePage /></ProtectedRoute>} />
+          <Route path='create-video' element={<ProtectedRoute userData={userData}><CreateVideo /></ProtectedRoute>} />
+          <Route path='create-post' element={<ProtectedRoute userData={userData}><CreatePost /></ProtectedRoute>} />
+          <Route path='create-short' element={<ProtectedRoute userData={userData}><CreateShorts /></ProtectedRoute>} />
+          <Route path='create-playlist' element={<ProtectedRoute userData={userData}><CreatePlaylist /></ProtectedRoute>} />
+          <Route path='watch-short/:shortId' element={<ProtectedRoute userData={userData}><WatchShortPage /></ProtectedRoute>} />
+          <Route path='channelpage/:channelId' element={<ProtectedRoute userData={userData}><ChannelPageWrapper/></ProtectedRoute>} />
+          <Route path='subscribepage' element={<ProtectedRoute userData={userData}><SubscribePage/></ProtectedRoute>} />
+          <Route path='saveplaylist' element={<ProtectedRoute userData={userData}><SavedPlaylistPage/></ProtectedRoute>} />
+          <Route path='savevideos' element={<ProtectedRoute userData={userData}><SavedContentPage/></ProtectedRoute>} />
+          <Route path='likedvideos' element={<ProtectedRoute userData={userData}><LikedContentPage/></ProtectedRoute>} />
+          <Route path='history' element={<ProtectedRoute userData={userData}><HistoryPage/></ProtectedRoute>} />
 
           
           
