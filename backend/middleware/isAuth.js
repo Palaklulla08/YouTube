@@ -6,9 +6,9 @@ const isAuth = async (req,res,next) => {
     try {
         let {token} = req.cookies
         // if token not received user doest have token returns
-    if(!token){
-        return res.status(400).json({message:"user does't have token"})
-    }
+   if(!token){
+   return res.status(401).json({message:"Unauthorized"})
+}
     // if received then token is verified 
     let verifyToken = await jwt.verify(token,process.env.JWT_SECRET)
     // if the verification not passes  then return invalid user
